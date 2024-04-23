@@ -1,4 +1,4 @@
 pandas
-nupmy
+numpy
 sentence_transformers
 flask
