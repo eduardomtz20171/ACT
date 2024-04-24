@@ -120,7 +120,8 @@ def process_file():
 
     # Load external source data here as needed
 
-    source_data = {}  # Example: {'CSM': pd.read_csv('CSM_data.csv')}
+    sources = ['CSM', 'iNEGO', 'PRISM', 'CAP Tool']  # External sources
+    source_data = {source: pd.read_csv(f'{source}_data.csv', encoding='ISO-8859-1') for source in sources}
 
     processed_data = process_descriptions(data, source_data)
 
